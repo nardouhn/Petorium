@@ -6,6 +6,8 @@ from app.extensions import db
 
 auth_bp = Blueprint('auth_bp', __name__)
 
+
+
 # Đăng ký user
 @auth_bp.route('/register', methods=['POST'])
 def register():
@@ -40,7 +42,9 @@ def login():
         return jsonify({"message": "Invalid credentials"}), 401
 
 
-# Route bảo vệ (chỉ truy cập nếu có token)
+
+
+# Route bảo vệ (chỉ truy cập nếu có token)iếtphần
 @auth_bp.route('/protected', methods=['GET'])
 @jwt_required()
 def protected():

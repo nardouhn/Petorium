@@ -1,52 +1,54 @@
 from flask import Blueprint, request, jsonify
-from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
-from app.models.user_model import User
-from app.extensions import db  
+from flask_jwt_extended import jwt_required, get_jwt_identity
+from app.services.auth_service import register_user, login_user
 
-
+# Khởi tạo Blueprint (BẮT BUỘC PHẢI Ở TRÊN)
 auth_bp = Blueprint('auth_bp', __name__)
 
-
-
-# Đăng ký user
+# =====================
+# ĐĂNG KÝ
+# =====================
 @auth_bp.route('/register', methods=['POST'])
 def register():
     data = request.get_json()
-    username = data['username']
-    password = data['password']
 
-    if User.query.filter_by(username=username).first():
-        return jsonify({"message": "User already exists"}), 400
+    # validate input
+    if not data or 'username' not in data or 'password' not in data:
+        return jsonify(message="Missing username or password"), 400
 
-    new_user = User(username=username)
-    new_user.hash_password(password)
-    db.session.add(new_user)
-    db.session.commit()
-
-    return jsonify({"message": "User created successfully"}), 201
+    try:
+        register_user(data['username'], data['password'])
+        return jsonify(message="User created successfully"), 201
+    except ValueError as e:
+        return jsonify(message=str(e)), 400
 
 
-# Đăng nhập user → trả về token
+# =====================
+# ĐĂNG NHẬP
+# =====================
 @auth_bp.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
-    username = data['username']
-    password = data['password']
 
-    user = User.query.filter_by(username=username).first()
+    if not data or 'username' not in data or 'password' not in data:
+        return jsonify(message="Missing username or password"), 400
 
-    if user and user.check_password(password):
-        access_token = create_access_token(identity=username)
-        return jsonify(access_token=access_token), 200
-    else:
-        return jsonify({"message": "Invalid credentials"}), 401
+    token = login_user(data['username'], data['password'])
 
+    if not token:
+        return jsonify(message="Invalid credentials"), 401
 
+    return jsonify(access_token=token), 200
 
 
-# Route bảo vệ (chỉ truy cập nếu có token)iếtphần
+# =====================
+# ROUTE BẢO VỆ (TEST JWT)
+# =====================
 @auth_bp.route('/protected', methods=['GET'])
 @jwt_required()
 def protected():
     current_user = get_jwt_identity()
-    return jsonify(message=f"Hello {current_user}, you have access!"), 200
+    return jsonify(
+        message="Access granted",
+        user=current_user
+    ), 200

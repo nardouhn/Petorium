@@ -64,6 +64,6 @@ Verify npm version:
 - B4: Cài đặt Tailwindcss:
   + Hướng dẫn setup: https://www.youtube.com/watch?v=xxpeaBLZNaM&list=PLt2fZkYs6q_l2WebLGr6biyk551rLUtLV&index=56 (đoạn Tailwindcss installation and configuration)
   + Link tải: https://tailwindcss.com/docs/installation/using-vite
-- B5: Cài đặt các gói bổ sung: npm install lucide-react react-datepicker framer-motion react-hot-toast aos
-- B6: Tải và copy tất cả các file src và components
+- B5: Cài đặt các gói bổ sung: npm install lucide-react react-datepicker framer-motion react-hot-toast aos react-router-dom
+- B6: Download và tổ chức tất cả các file như trong các thư mục: pages, public và src
 - B7: Chạy chương trình trong terminal project: npm run dev

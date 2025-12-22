@@ -1,69 +1,37 @@
-# React + Vite
+🔹 Bước 0: Kiểm tra đã cài Git chưa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mở Terminal / Command Prompt và chạy:
 
-Currently, two official plugins are available:
+git --version
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+Nếu hiện phiên bản (vd: git version 2.43.0) → OK
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Nếu báo lỗi → cần cài Git trước: https://git-scm.com
 
-## Expanding the ESLint configuration
+#Chạy demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##Window
+git clone https://github.com/nardouhn/pet_hopital.git
+cd pet_hopital
+git branch -a
+git checkout frontend
+git pull
 
-# Các bước để chạy
-- B1:Cài đặt thư viện Nodejs: https://nodejs.org/en/download -> Mở terminal
-Verify the Node.js version:
-  node -v # Should print "v22.21.0".
-Verify npm version:
-  npm -v # Should print "10.9.4".
-- B2: Tạo và vào thư mục project trống
-- B3: Tạo project bằng công cụ Vite: chạy câu lệnh sau trong Terminal của project:
-  + npx create-vite
-    
-    >  Project name:
-    >  .
-    
-    >  Select a framework:
-    >  React
-    
-    >  Select a variant:
-    >  JavaScript
-    
-    >  Use rolldown-vite (Experimental)?:
-    >  No
-    
-    >  Install with npm and start now?
-    >  Yes
-    
-    >  Scaffolding project in D:\test...
-    
-    >  Installing dependencies with npm...
-    added 153 packages, and audited 154 packages in 13s
-    32 packages are looking for funding
-      run `npm fund` for details
-    found 0 vulnerabilities
-    
-    >  Starting dev server...
-    > test@0.0.0 dev
-    > vite
-    
-    >  VITE v7.1.12  ready in 973 ms
-    
-    > ➜  Local:   http://localhost:5173/
-    > ➜  Network: use --host to expose
-    > ➜  press h + enter to show help
+🎯 Sau khi clone xong (nếu là frontend Vite)
+npm install
+npm run dev
 
-  + Ctrl + C -> y -> Enter
-  + npm install 
-
-- B4: Cài đặt Tailwindcss:
-  + Hướng dẫn setup: https://www.youtube.com/watch?v=xxpeaBLZNaM&list=PLt2fZkYs6q_l2WebLGr6biyk551rLUtLV&index=56 (đoạn Tailwindcss installation and configuration)
-  + Link tải: https://tailwindcss.com/docs/installation/using-vite
-- B5: Cài đặt các gói bổ sung: npm install lucide-react react-datepicker framer-motion react-hot-toast aos react-router-dom
-- B6: Download và tổ chức tất cả các file như trong các thư mục: pages, public và src
-- B7: Chạy chương trình trong terminal project: npm run dev
+##MacOS
+git --version
+cd ~
+mkdir Projects
+cd Projects
+git clone https://github.com/nardouhn/pet_hopital.git
+cd pet_hopital
+git branch -a
+git checkout frontend
+git pull origin frontend
+cd frontend
+npm install
+npm run dev

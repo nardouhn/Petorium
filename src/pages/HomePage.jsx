@@ -5,8 +5,8 @@ import Services from "@/components/Services";
 import Booking from "@/components/Booking";
 import Testimonials from "@/components/Testimonials";
 import Feedback from "@/components/Feedback";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/NavBar";
+import Footer from "@/layouts/Footer";
+import Navbar from "@/layouts/NavBar";
 
 export default function HomePage() {
   return (
@@ -17,7 +17,6 @@ export default function HomePage() {
         <About />
         <Services />
         <Booking />
-        <Testimonials />
         <Feedback />
         <Footer />
       </main>

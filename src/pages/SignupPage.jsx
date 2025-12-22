@@ -1,7 +1,6 @@
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import SignupForm from "@/components/SignupForm";
-import LoginPage from "./LoginPage";
+import NavBar from "@/layouts/NavBar";
+import Footer from "@/layouts/Footer";
+import SignupForm from "@/components/auth/SignupForm";
 import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -22,7 +21,7 @@ export default function SignupPage() {
         <div className="mt-6 w-full max-w-xl bg-white rounded-xl shadow-md p-4">
           <Link
             to="/login"
-            className="w-full rounded-xl bg-teal-500 py-3 text-white font-semibold flex items-center justify-center gap-2 hover:bg-teal-600 transition"
+            className="w-full rounded-xl bg-[linear-gradient(90deg,#14B8A6_0%,#0EA5E9_100%)] py-3 text-white font-semibold flex items-center justify-center gap-2 hover:bg-teal-600 transition"
           >
             ♡ Đăng nhập (Log in)
           </Link>

@@ -1,7 +1,7 @@
-import LoginForm from "@/components/LoginForm";
+import LoginForm from "@/components/auth/LoginForm";
 
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import NavBar from "@/layouts/NavBar";
+import Footer from "@/layouts/Footer";
 import { Heart } from "lucide-react";
 
 export default function LoginPage() {

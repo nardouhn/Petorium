@@ -23,8 +23,6 @@ git checkout frontend
 
 git pull
 
-🎯 Sau khi clone xong 
-
 npm install
 
 npm run dev

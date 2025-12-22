@@ -9,9 +9,10 @@ Nếu hiện phiên bản (vd: git version 2.43.0) → OK
 
 Nếu báo lỗi → cần cài Git trước: https://git-scm.com
 
-## Chạy demo ##
 
-**Window: Mở Terminal / Command Prompt và chạy:**
+
+# Window: Mở Terminal / Command Prompt và chạy: #
+
 git clone https://github.com/nardouhn/pet_hopital.git
 
 cd pet_hopital
@@ -28,10 +29,10 @@ npm install
 
 npm run dev
 
-**Mở Terminal trên macOS**
-git --version
+# Mở Terminal trên macOS #
 
 cd ~
+
 mkdir Projects
 
 cd Projects

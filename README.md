@@ -13,7 +13,7 @@ Nếu báo lỗi → cần cài Git trước: https://git-scm.com
 
 # Window: Mở Terminal / Command Prompt và chạy: #
 
-git clone https://github.com/nardouhn/pet_hopital.git
+git clone https://github.com/nardouhn/Petorium.git
 
 cd pet_hopital
 
@@ -35,7 +35,7 @@ mkdir Projects
 
 cd Projects
 
-git clone https://github.com/nardouhn/pet_hopital.git
+git clone https://github.com/nardouhn/Petorium.git
 
 cd pet_hopital
 

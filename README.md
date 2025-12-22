@@ -9,9 +9,9 @@ Nếu hiện phiên bản (vd: git version 2.43.0) → OK
 
 Nếu báo lỗi → cần cài Git trước: https://git-scm.com
 
-#Chạy demo
+### Chạy demo
 
-### Window
+## Window: Mở Terminal / Command Prompt và chạy: ##
 git clone https://github.com/nardouhn/pet_hopital.git
 
 cd pet_hopital

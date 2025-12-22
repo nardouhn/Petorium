@@ -11,27 +11,43 @@ Nếu báo lỗi → cần cài Git trước: https://git-scm.com
 
 #Chạy demo
 
-##Window
+### Window
 git clone https://github.com/nardouhn/pet_hopital.git
+
 cd pet_hopital
+
 git branch -a
+
 git checkout frontend
+
 git pull
 
-🎯 Sau khi clone xong (nếu là frontend Vite)
+🎯 Sau khi clone xong 
+
 npm install
+
 npm run dev
 
-##MacOS
+### MacOS
 git --version
+
 cd ~
 mkdir Projects
+
 cd Projects
+
 git clone https://github.com/nardouhn/pet_hopital.git
+
 cd pet_hopital
+
 git branch -a
+
 git checkout frontend
+
 git pull origin frontend
+
 cd frontend
+
 npm install
+
 npm run dev

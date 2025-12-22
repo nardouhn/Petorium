@@ -2,9 +2,9 @@ import React from "react";
 
 import { Toaster } from "sonner";
 import { BrowserRouter, Routes, Route } from "react-router";
-import ScrollToHash from "./utils/ScrollToHash";
-import HomePage from "./pages/HomePage";
-import NotFound from "./pages/NotFound";
+import ScrollToHash from "@/utils/ScrollToHash";
+import HomePage from "@/pages/HomePage";
+import NotFound from "@/pages/NotFound";
 import SignupPage from "@/pages/SignupPage";
 import LoginPage from "@/pages/LoginPage";
 import ServicePage from "@/pages/ServicePage";
